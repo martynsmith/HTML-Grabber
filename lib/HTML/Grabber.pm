@@ -156,7 +156,7 @@ Return the HTML of the currently matched elements
 sub html {
     my ($self) = @_;
 
-    return join('', map { $_->toString } shift->nodes);
+    return join('', map { $_->toStringHTML } shift->nodes);
 }
 
 =head2 remove()
