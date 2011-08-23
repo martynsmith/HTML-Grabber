@@ -1,6 +1,5 @@
 #!/usr/bin/perl
 
-use 5.010;
 use strict;
 use warnings;
 
@@ -13,6 +12,6 @@ $dom->find('li.status')->each(sub {
     my $body = $_->find('.entry-content')->text;
     my $when = $_->find('.entry-date')->text;
     my $link = $_->find('a[rel="bookmark"]')->attr('href');
-    say "$body $when (link: $link)";
+    print "$body $when (link: $link)\n";
 });
 

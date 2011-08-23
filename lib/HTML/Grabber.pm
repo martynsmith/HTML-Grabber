@@ -2,7 +2,6 @@ package HTML::Grabber;
 
 # ABSTRACT: jQuery style DOM traversal/manipulation
 
-use 5.010;
 use strict;
 use warnings;
 
