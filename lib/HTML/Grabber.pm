@@ -296,6 +296,25 @@ sub each {
     }
 }
 
+=head2 map
+
+Execute a sub for each matched node returning a list containing the result of
+each sub
+
+=cut
+sub map {
+    my ($self, $sub) = @_;
+
+    my @results;
+
+    foreach my $node ( $self->nodes ) {
+        local $_ = $self->new(nodes => [$node]);
+        push @results, $sub->($_);
+    }
+
+    return @results;
+}
+
 =head1 CLASS METHODS
 
 =head2 uniq( @nodes )
