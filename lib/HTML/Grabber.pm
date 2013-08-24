@@ -86,7 +86,7 @@ filtered by a selector.
 sub find {
     my ($self, $selector) = @_;
 
-    my $xpath = '.' . selector_to_xpath($selector);
+    my $xpath = selector_to_xpath($selector, root => './');
 
     my @nodes;
     foreach my $node ( $self->nodes ) {
